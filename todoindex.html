@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas do Allirama</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Check List de Operações</h1>
+    </header>
+
+    <div class="app_Layout">
+        <!-- Container do Input (Esquerda no desktop, topo no mobile) -->
+        <div class="card_Container input_Card">
+            <h2>Nova Tarefa</h2>
+            <div class="input_Container">
+                <input type="text" class="input_Task" placeholder="Não me esquecer de...">
+                <div class="button_Group">
+                    <button type="button" class="add_Btn">Adicionar</button>
+                    <button type="button" class="clear_Btn">Limpar Tudo</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Container das Tasks (Direita no desktop, base no mobile) -->
+        <div class="card_Container list_Card">
+            <h2>Minhas Tarefas</h2>
+            <ul class="task_List">
+                <li class="task_Item">
+                    <img src="/img/checked.png" alt="checked" class="icon_Checked">
+                    <span>completar agatemele (HTML)</span>
+                    <img src="/img/trash.png" alt="trash" class="icon_Trash">
+                </li>
+
+                <li class="task_Item">
+                    <img src="/img/checked.png" alt="checked" class="icon_Checked">
+                    <span>estilizar com css</span>
+                    <img src="/img/trash.png" alt="trash" class="icon_Trash">
+                </li>
+
+                <li class="task_Item">
+                    <img src="/img/checked.png" alt="checked" class="icon_Checked">
+                    <span>implementar funcionalidades com js</span>
+                    <img src="/img/trash.png" alt="trash" class="icon_Trash">
+                </li>
+                
+                <li class="task_Item">
+                    <img src="/img/checked.png" alt="checked" class="icon_Checked">
+                    <span>incluir a localstorage</span>
+                    <img src="/img/trash.png" alt="trash" class="icon_Trash">
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

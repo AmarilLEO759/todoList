@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    outline: none;
+}
+
+body {
+    background: url(/img/sepa\ background.png) no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: rgb(72, 2, 100);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Layout Principal em Flexbox (lado a lado no desktop) */
+.app_Layout {
+    display: flex;
+    gap: 20px;
+    max-width: 900px;
+    width: 100%;
+    margin: 20px auto 50px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    align-items: flex-start; /* Evita que o card de input estique até a altura da lista */
+}
+
+/* Base de estilo comum para os dois Containers separados */
+.card_Container {
+    background-color: #d1d1d1;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card_Container h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #b5b5b5;
+    padding-bottom: 5px;
+}
+
+/* Box da esquerda (Input) */
+.input_Card {
+    flex: 1; /* Ocupa uma proporção flexível */
+}
+
+/* Box da direita (Lista de Tarefas) */
+.list_Card {
+    flex: 1.5; /* Ocupa mais espaço lateral */
+}
+
+.input_Container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.input_Task {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 15px;
+}
+
+.button_Group {
+    display: flex;
+    gap: 10px;
+}
+
+.add_Btn {
+    flex: 1;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.add_Btn:hover {
+    opacity: 0.8;
+}
+
+.add_Btn:active {
+    opacity: 0.6;
+}
+
+.clear_Btn {
+    flex: 1;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    background-color: #e53935;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.clear_Btn:hover {
+    opacity: 0.8;
+}
+
+.clear_Btn:active {
+    opacity: 0.6;
+}
+
+.task_List {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.task_Item {
+    background-color: #f9f9f9;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 0 15px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+img {
+    width: 25px;
+    height: 25px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.task_Item:hover img {
+    opacity: 1;
+}
+
+.task_Item.done span {
+    text-decoration: line-through;
+    color: #888888;
+}
+
+.task_Item.done {
+    background-color: #e8e8e8;
+    opacity: 0.8;
+}
+
+/* Regra de Responsividade (Media Query para mobile) */
+@media (max-width: 768px) {
+    .app_Layout {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .list_Card {
+        flex: none;
+    }
+}
