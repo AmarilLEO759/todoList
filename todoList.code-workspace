@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../../../ADS/portifolios 2026/todolist.allirama/img"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "todoList"
+	}
+}
